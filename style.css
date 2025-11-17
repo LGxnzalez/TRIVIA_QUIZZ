@@ -1,0 +1,168 @@
+/* --- Base y Reset --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: #98b8e9; /* Un gris claro, más suave que #eda */
+    color: #333;
+    line-height: 1.5;
+}
+
+/* --- Contenedor Principal de la Trivia --- */
+.trivia_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem; 
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+    max-width: 600px; 
+    margin: 2rem auto;
+}
+
+
+.title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+/* --- Contenedor de Puntuación --- */
+.respuestas_container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+#correctas {
+    color: #28a745; 
+    font-weight: 700;
+    margin-left: 8px;
+}
+
+#incorrectas {
+    color: #dc3545;
+    font-weight: 700;
+    margin-left: 8px;
+}
+
+/* --- Contenedor de Pregunta y Formulario --- */
+.div_container {
+    border: 1px solid #ddd; 
+    border-radius: 6px;
+    padding: 1.5rem;
+    width: 100%;
+}
+
+/* --- Párrafo de Carga --- */
+#Cargando {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #666;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Clase que tu JS añade */
+.text-warning {
+    color: #ffc107; 
+}
+
+/* --- Formulario --- */
+.form_question {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.25rem; 
+}
+
+/* --- Etiqueta de la Pregunta --- */
+#question {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #34495e;
+}
+
+/* --- Menú Desplegable (Select) --- */
+#options_select {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    width: 100%;
+    cursor: pointer;
+    -webkit-appearance: none; 
+    -moz-appearance: none;    
+    appearance: none;        
+    /* Añade una flecha personalizada */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007bff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 0.65em auto;
+}
+
+#options_select:focus {
+    outline: none;
+    border-color: #007bff; 
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.2);
+}
+
+/* --- Cuadro de Resultados/Explicación --- */
+#resultados {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    background-color: #e6f7ff; 
+    border: 1px solid #b3e0ff;
+    color: #0056b3;
+    padding: 1rem;
+    border-radius: 4px;
+    white-space: pre-wrap; 
+}
+
+/* --- Botones --- */
+.form_question button {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.form_question button:active {
+    transform: scale(0.98); 
+}
+
+
+#submit_btn {
+    background-color: #007bff; 
+    color: white;
+}
+
+#submit_btn:hover {
+    background-color: #0056b3;
+}
+
+/* Botón "Siguiente Pregunta"  */
+.form_question button[type="button"] {
+    background-color: #e20909; /* Verde */
+    color: white;
+}
+
+.form_question button[type="button"]:hover {
+    background-color: #218838;
+}

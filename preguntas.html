@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Trivia</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -14,32 +14,30 @@
 
         <div id="container" class="respuestas_container">
             <span> Correctas: <strong id="correctas">0</strong></span>
-            <span > Incorrectas: <strong id="incorrectas">0</strong></span>
+            <span> Incorrectas: <strong id="incorrectas">0</strong></span>
         </div>
 
         <div id="question-container" class="div_container">
             <p id="Cargando" class="fs-5">Cargando pregunta de Gemini...</p>
 
-      
-               <form id="form_contain" class="form_question">
-                        <label for="options_select" id="question">Selecciona una opción:</label>
-                        <select id="options_select" name="opciones">
-                            <option value="1">Opción 1</option>
-                            <option value="2">Opción 2</option>
-                            <option value="3">Opción 3</option>
-                            <option value="4">Opción 4</option>
-                        </select>
-                        <div id="resultados">
+            <!-- FORMULARIO CORREGIDO -->
+            <form id="form_contain" class="form_question">
+                <label for="options_select" id="question">Selecciona una opción:</label>
 
-                        </div>
-                        <button type="submit" id="submit_btn">Enviar</button>
+                <select id="options_select" name="opciones">
+                    <option disabled selected>Elija una opción...</option>
+                </select>
 
-  
-                <form id="miFormulario">
+                <div id="resultados"></div>
 
+                <button type="submit" id="submit_btn">Enviar</button>
+            </form>
+            <!-- FIN FORMULARIO -->
         </div>
+
     </section>
-        <script src="js/script.js"></script>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
